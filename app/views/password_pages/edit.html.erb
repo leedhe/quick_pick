@@ -1,0 +1,25 @@
+<h1>Editing Password Addition #<%= @password_page.id %></h1>
+
+<form action="/password_pages/<%= @password_page.id %>/update">
+  <div>
+    <label for="c_num">number of characters</label><br />
+    <input id="c_num" name="c_num" type="text" value="<%= @password_page.c_num %>"/>
+  </div>
+  <div>
+    <label for="security">how secure?</label><br />
+    <select value="<%= @password_page.security %>">
+      <option value="strong">Strong (8+ characters)</option>
+      <option value="medium">Medium (4+ characters)</option>
+      <option value="weak">Weak (less than 4 characters)</option>
+    </select>
+  </div>
+  <div>
+    <label for="comment">password:</label><br />
+    <input id="comment" name="comment" type="text" value="<%= @password_page.comment %>" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

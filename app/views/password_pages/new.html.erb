@@ -1,0 +1,23 @@
+<h1>New Password Addition</h1>
+
+<form action="/create_password_page">
+  <div>
+    <label for="c_num">number of characters</label><br />
+    <input id="c_num" name="c_num" type="text" />
+  </div>
+  <div>
+    <label for="security">how secure?</label><br />
+    <select>
+      <option value="strong">Strong (8+ characters)</option>
+      <option value="medium">Medium (4+ characters)</option>
+      <option value="weak">Weak (less than 4 characters)</option>
+    </select>
+  </div>
+  <div>
+    <label for="comment">password:</label><br />
+    <input id="comment" name="comment" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>

@@ -1,0 +1,36 @@
+<h1>Password pages</h1>
+
+<p><a href="/new_password_page">Add a New Password Page</a></p>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Here is your quick_picked password:</div>
+
+  <!-- Table -->
+  <table>
+  <thead>
+    <tr>
+      <th>Characters</th>
+      <th>Security</th>
+      <th>How many likes?</th>
+      <th>Comment on this password</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @password_pages.each do |password_page| %>
+    <tr>
+          <td><%= password_page.c_num %></td>
+          <td><%= password_page.security %></td>
+          <td><%= password_page.like %></td>
+          <td><%= password_page.comment %></td>
+          <td><a href="/password_pages/<%= password_page.id %>">Show</a>
+        </td>
+      <td><a href="/password_pages/<%= password_page.id %>/edit">Edit</a></td>
+      <td><a href="/password_pages/<%= password_page.id %>/destroy">Destroy</a></td>
+      <td><%= @password_pages %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>

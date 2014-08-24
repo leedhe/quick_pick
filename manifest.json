@@ -1,0 +1,16 @@
+{
+  "name": "Passle",
+  "description": "No more password hassles with Passle. Passle is a simple random password generator that's easy to use. Set one condition and get a quick-fix password that we will never, ever store.",
+  "version": "1.0.0",
+  "app": {
+    "urls": [
+      "http://protected-falls-2424.herokuapp.com/"
+    ],
+    "launch": {
+      "web_url": "http://protected-falls-2424.herokuapp.com/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  }
+}

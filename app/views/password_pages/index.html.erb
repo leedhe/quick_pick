@@ -1,17 +1,18 @@
-<h1 style="font-family: Raleway">quick_pick Password Picker</h1>
+<div class="footer-push" style="padding-top: 80px;">
+  <h1 style="font-family: Raleway">Passle Password Picker</h1>
 
-<div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Here is your quick_picked password:</div>
-  <div>
-    <label for="password">password:</label><br />
-    <%= @password_pages %>
-  </div>
-  <div>
-    <label for="security">security level:</label><br />
-    <%= @password_security.capitalize! %>
+  <div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">Here is your quick_picked password:</div>
+    <div>
+      <label for="password">password:</label><br />
+      <%= @password_pages %>
+    </div>
+    <div>
+      <label for="security">security level:</label><br />
+      <%= @password_security.capitalize! %>
+    </div>
   </div>
 </div>
-
 <p><a href="/random_password">Get another password</a></p>
 <p><a class="glyphicon glyphicon-repeat">Or refresh the page for another password that is <%= @password_security.downcase %></a></p>

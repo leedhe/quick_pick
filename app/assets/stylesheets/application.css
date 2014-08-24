@@ -1,4 +1,4 @@
-/*
+ /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -21,4 +21,13 @@
 
 body {
   background-color: #ccccff;
+}
+
+.footer-push {
+   height: 500px; 
+   padding-top: 100px;
+}
+
+footer {
+  background-color: white;
 }

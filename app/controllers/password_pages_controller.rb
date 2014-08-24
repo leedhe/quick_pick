@@ -1,10 +1,17 @@
 class PasswordPagesController < ApplicationController
 
   def index
-    if params['c_num'] && params['security']
-      @password_pages = Array.new(8){[*'0'..'9', *'a'..'z', *'A'..'Z'].sample}.join.where(c_num: params['c_num'], security: params['security'])
-    else
-      @password_pages = PasswordPage.all
+    @password_security = params['security']
+    if params['security']
+      if params['security'] == "strong"
+        @password_pages = (0..10).map{ rand(36).to_s(36) }.join
+      elsif params['security'] == "medium"
+        @password_pages = (0..6).map{ rand(36).to_s(36) }.join
+      elsif params['security'] == "weak"
+        @password_pages = (0..3).map{ rand(36).to_s(36) }.join
+      else
+        @password_pages = PasswordPage.all
+      end
     end
   end
 

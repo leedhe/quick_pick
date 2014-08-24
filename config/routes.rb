@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   get '/home' => 'application#home'
   get '/' => 'application#home'
   get '/random_password' => 'password_pages#randompassword'
+  get '/about_us' => 'application#about_us'
 end

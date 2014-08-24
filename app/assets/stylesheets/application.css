@@ -31,3 +31,11 @@ body {
 footer {
   background-color: white;
 }
+
+.navbar .nav > li > a {
+  color: white;
+}
+
+.navbar .navbar-brand {
+  color: white;
+}

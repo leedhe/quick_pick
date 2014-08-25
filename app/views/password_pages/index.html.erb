@@ -10,9 +10,15 @@
     </div>
     <div>
       <label for="security">security level:</label><br />
-      <%= @password_security.capitalize! %>
+      <% if params['security'] < "6" %>
+        <p>Weak</p>
+      <% elsif params['security'] > "5" && params['security'] < "8" %>
+        <p>Medium</p>
+      <% elsif params['security'] > "7" %>
+        <p>Strong</p>
+      <% end %>
     </div>
   </div>
 </div>
 <p><a href="/random_password">Get another password</a></p>
-<p><a class="glyphicon glyphicon-repeat">Or refresh the page for another password that is <%= @password_security.downcase %></a></p>
+<p><a class="glyphicon glyphicon-repeat">Or refresh the page for another password that is  <%= params['security'] %> characters</a></p>

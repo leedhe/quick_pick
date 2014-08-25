@@ -10,11 +10,11 @@
     </div>
     <div>
       <label for="security">security level:</label><br />
-      <% if params['security'] < "6" %>
+      <% if params['security'] == "5" %>
         <p>Weak</p>
-      <% elsif params['security'] > "5" && params['security'] < "8" %>
+      <% elsif params['security'] == "6" || params['security'] == "7" %>
         <p>Medium</p>
-      <% elsif params['security'] > "7" %>
+      <% elsif params['security'] == "8" || params['security'] == "9" || params['security'] == "10" %>
         <p>Strong</p>
       <% end %>
     </div>

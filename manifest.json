@@ -1,0 +1,24 @@
+{
+  "name": "Passfree",
+  "description": "Passfree is a password/passphrase generator that makes getting passwords a quick to-do and not a chore.",
+  "version": "1",
+  "app": {
+    "urls": [
+      "http://protected-falls-2424.herokuapp.com/home",
+      "http://protected-falls-2424.herokuapp.com/random_password",
+      "http://protected-falls-2424.herokuapp.com/password_pages",
+      "http://protected-falls-2424.herokuapp.com/random_passphrase",
+      "http://protected-falls-2424.herokuapp.com/passphrases"
+    ],
+    "launch": {
+      "web_url": "http://protected-falls-2424.herokuapp.com/"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}

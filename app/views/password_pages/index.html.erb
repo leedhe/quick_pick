@@ -10,7 +10,7 @@
     </div>
     <div>
       <label for="security">security level:</label><br />
-      <% if params['security'] == "5" %>
+      <% if params['security'] == "4" || params['security'] == "5" %>
         <p>Weak</p>
       <% elsif params['security'] == "6" || params['security'] == "7" %>
         <p>Medium</p>
@@ -19,6 +19,7 @@
       <% end %>
     </div>
   </div>
+  <h4>Don't like it? &darr; for options</h4>
 </div>
 <p><a href="/random_password">Get another password</a></p>
 <p><a class="glyphicon glyphicon-repeat">Or refresh the page for another password that is  <%= params['security'] %> characters</a></p>

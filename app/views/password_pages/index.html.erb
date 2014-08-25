@@ -1,25 +1,24 @@
 <div class="footer-push" style="padding-top: 80px;">
-  <h1 style="font-family: Raleway">Passle Password Picker</h1>
-
-  <div class="panel panel-default">
+  <h1 style="font-family: Raleway">Passfree Password Picker</h1>
+  
     <!-- Default panel contents -->
-    <div class="panel-heading">Here is your Passled password:</div>
-    <div>
+    <h3>Here is your Passfreed password:</h3>
+  <div class="password-info">
       <label for="password">password:</label><br />
       <%= @password_pages %>
     </div>
     <div>
       <label for="security">security level:</label><br />
       <% if params['security'] == "4" || params['security'] == "5" %>
-        <p>Weak</p>
+      <h4>Weak</h4>
       <% elsif params['security'] == "6" || params['security'] == "7" %>
-        <p>Medium</p>
+          <h4>Medium</h4>
       <% elsif params['security'] == "8" || params['security'] == "9" || params['security'] == "10" %>
-        <p>Strong</p>
+          <h4>Strong</h4>
       <% end %>
     </div>
-  </div>
-  <h4>Don't like it? &darr; for options</h4>
-</div>
+  <p style="padding-top: 30px">Don't like it? &darr; for options</p>
+ </div>
+
 <p><a href="/random_password">Get another password</a></p>
 <p><a class="glyphicon glyphicon-repeat">Or refresh the page for another password that is  <%= params['security'] %> characters</a></p>

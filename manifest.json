@@ -1,7 +1,7 @@
 {
   "name": "Passfree",
   "description": "Passfree is a password/passphrase generator that makes getting passwords a quick to-do and not a chore.",
-  "version": "1.0.4",
+  "version": "2.0.2",
   "manifest-version": "2",
   "app": {
     "urls": [

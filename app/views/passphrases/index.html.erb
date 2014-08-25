@@ -1,0 +1,24 @@
+<div class="footer-push" style="padding-top: 80px;">
+  <h1 style="font-family: Raleway">Passfree Passphrase Picker</h1>
+  
+    <!-- Default panel contents -->
+    <h3>Here is your Passfreed passphrase:</h3>
+  <div class="passphrase-info">
+      <label for="passphrase">passphrase:</label><br />
+    <%= @passphrases %>
+    </div>
+    <div>
+      <label for="security">security level:</label><br />
+      <% if params['security'] == "2" %>
+      <h4>Weak</h4>
+      <% elsif params['security'] == "3"  || params['security'] == "4" %>
+          <h4>Medium</h4>
+      <% elsif params['security'] == "5" || params['security'] == "6" %>
+          <h4>Strong</h4>
+      <% end %>
+    </div>
+  <p style="padding-top: 30px">Don't like it? &darr; for options</p>
+ </div>
+
+<p><a href="/random_passphrase">Get another passphrase</a></p>
+<p><a class="glyphicon glyphicon-repeat">Or refresh the page for another passphrase that is  <%= params['security'] %> characters</a></p>

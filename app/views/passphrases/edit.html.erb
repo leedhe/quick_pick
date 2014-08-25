@@ -1,0 +1,21 @@
+<h1>Editing Passphrase #<%= @passphrase.id %></h1>
+
+<form action="/passphrases/<%= @passphrase.id %>/update">
+  <div>
+    <label for="words">words</label><br />
+    <input id="words" name="words" value="<%= @passphrase.words  %>" type="text" />
+  </div>
+  <div>
+    <label for="security">security</label><br />
+    <input id="security" name="security" value="<%= @passphrase.security  %>" type="text" />
+  </div>
+  <div>
+    <label for="word_type">word_type</label><br />
+    <input id="word_type" name="word_type" value="<%= @passphrase.word_type  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

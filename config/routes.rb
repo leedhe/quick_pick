@@ -21,4 +21,8 @@ Rails.application.routes.draw do
   get '/' => 'application#home'
   get '/random_password' => 'password_pages#randompassword'
   get '/about_us' => 'application#about_us'
+  
+  # Routes for Passphrase: 
+  get '/random_passphrase' => 'passphrases#random_passphrase'
+  get '/passphrases' => 'passphrases#index'
 end

@@ -48,3 +48,5 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'webster', '~> 0.5.0'
+
+gem 'aes', '~> 0.5.0'

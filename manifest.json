@@ -1,7 +1,7 @@
 {
   "name": "Lockfind",
   "description": "Lockfind is a password/passphrase generator that makes getting passwords a quick to-do and not a chore.",
-  "version": "1.0.6",
+  "version": "1.0.6.6",
   "manifest_version": 2,
   "app": {
     "urls": [

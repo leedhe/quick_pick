@@ -6,13 +6,13 @@ require 'digest/sha1'
     @password_security = params['security']
       if params['security']
         @password_pages = (1..params['security'].to_i).map{ rand(36).to_s(36) }.join
-        c = OpenSSL::Cipher::Cipher.new("aes-256-cbc")
-        c.encrypt
-        c.key = key = Digest::SHA1.hexdigest("yourpass")
-        c.iv = iv = c.random_iv
-        e = c.update(@password_pages)
-        e << c.final
-        @password_encrypted = "#{e}\n"
+       # c = OpenSSL::Cipher::Cipher.new("aes-256-cbc")
+       # c.encrypt
+       # c.key = key = Digest::SHA1.hexdigest("yourpass")
+       # c.iv = iv = c.random_iv
+       # e = c.update(@password_pages)
+       # e << c.final
+       # @password_encrypted = "#{e}\n"
       else
         @password_pages = PasswordPage.all
       end

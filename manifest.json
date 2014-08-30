@@ -5,14 +5,14 @@
   "manifest_version": 2,
   "app": {
     "urls": [
-      "http://protected-falls-2424.herokuapp.com/home",
-      "http://protected-falls-2424.herokuapp.com/random_password",
-      "http://protected-falls-2424.herokuapp.com/password_pages",
-      "http://protected-falls-2424.herokuapp.com/random_passphrase",
-      "http://protected-falls-2424.herokuapp.com/passphrases"
+      "https://lockfindapp.herokuapp.com/home",
+      "https://lockfindapp.herokuapp.com/random_password",
+      "https://lockfindapp.herokuapp.com/password_pages",
+      "https://lockfindapp.herokuapp.com/random_passphrase",
+      "https://lockfindapp.herokuapp.com/passphrases"
     ],
     "launch": {
-      "web_url": "http://protected-falls-2424.herokuapp.com/"
+      "web_url": "https://lockfindapp.herokuapp.com/"
     }
   },
   "icons": {

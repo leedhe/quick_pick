@@ -1,6 +1,7 @@
 class PasswordPagesController < ApplicationController
 require 'openssl'
 require 'digest/sha1'
+require 'webster'
 
   def index
     @password_security = params['security']
@@ -13,8 +14,12 @@ require 'digest/sha1'
        # e = c.update(@password_pages)
        # e << c.final
        # @password_encrypted = "#{e}\n"
+        if params[:security] && params[:generate] == "passphrase"
+           w = Webster.new
+           @passphrases = (1..params['security'].to_i).map{ w.random_word }.join
+        end
       else
-        @password_pages = PasswordPage.all
+        render 'index'
       end
   end
 
@@ -66,5 +71,35 @@ require 'digest/sha1'
   end
   
   def randompassword
+    @password_security = params['security']
+      if params['security']
+        @password_pages = (1..params['security'].to_i).map{ rand(36).to_s(36) }.join
+       # c = OpenSSL::Cipher::Cipher.new("aes-256-cbc")
+       # c.encrypt
+       # c.key = key = Digest::SHA1.hexdigest("yourpass")
+       # c.iv = iv = c.random_iv
+       # e = c.update(@password_pages)
+       # e << c.final
+       # @password_encrypted = "#{e}\n"
+        if params[:security] && params[:generate] == "passphrase"
+           w = Webster.new
+           @passphrases = (1..params['security'].to_i).map{ w.random_word }.join
+        end
+      else
+        render 'randompassword'
+      end
+      w = Webster.new
+       if params['security']
+         @passphrases = (1..params['security'].to_i).map{ w.random_word }.join
+       end
+  end
+  
+  def passphrases
+     w = Webster.new
+     if params['security']
+       @passphrases = (1..params['security'].to_i).map{ w.random_word }.join
+     else
+       redirect_to '/random_password'
+     end
   end
 end

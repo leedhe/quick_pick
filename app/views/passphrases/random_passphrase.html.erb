@@ -1,9 +1,9 @@
 <div class="footer-push">
   <h1 style="font-family: Raleway">Quickly pick a passphrase</h1>
 
-  <form action="/passphrases" name="pick_passphrase">
+  <form action="/random_passphrase" name="pick_passphrase">
     <div>
-      <label for="security">how many words?</label><br />
+      <label for="security">How many words?</label><br />
       <select name="security">
         <option value="2">2</option>
         <option value="3">3</option>
@@ -16,4 +16,23 @@
       <input type="submit">
     </div>
   </form>
-</div>
+
+
+    <!-- Default panel contents -->
+  <div class="passphrase-info">
+      <label for="passphrase">Passphrase:</label><br />
+    <%= @passphrases %>
+    </div>
+    <div>
+      <label for="security">Security Level:</label><br />
+      <% if params['security'] == "2" %>
+      <h4>Weak</h4>
+      <% elsif params['security'] == "3"  || params['security'] == "4" %>
+          <h4>Medium</h4>
+      <% elsif params['security'] == "5" || params['security'] == "6" %>
+          <h4>Strong</h4>
+      <% end %>
+    </div>
+  </div>
+<p><a class="glyphicon glyphicon-repeat">Refresh the page for another passphrase that is  <%= params['security'] %> words long</a></p>
+<p><a href="/random_password">Or get a password &larr;</a></p>

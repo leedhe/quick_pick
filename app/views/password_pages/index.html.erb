@@ -1,10 +1,28 @@
+<div class="footer-push">
+  <h1 style="font-family: Raleway">Quickly pick a <select name="generate"><option value="password">password</option><option value="passphrase">passphrase</option></select></h1>
 
-<div class="footer-push" style="padding-top: 80px;">
-  
+  <% if params[:generate] == "password" %>
+  <form action="/password_pages" name="pick_password">
+    <div>
+      <label for="security">how many characters?</label><br />
+      <select name="security">
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+    </div>
+    <div>
+      <input type="submit">
+    </div>
+  </form>
+
     <!-- Default panel contents -->
-    <h3>Here is your Lockfind password:</h3>
+ <div style="padding-top: 30px;">
   <div class="password-info">
-      <label for="password">password:</label><br />
       <%= @password_pages %>
     <%= @password_encrypted %>
     </div>
@@ -18,8 +36,24 @@
           <h4>Strong</h4>
       <% end %>
     </div>
-  <p style="padding-top: 30px">Don't like it? &darr; for options</p>
- </div>
-
-<p><a href="/random_password">Get another password</a></p>
 <p><a class="glyphicon glyphicon-repeat">Or refresh the page for another password that is  <%= params['security'] %> characters long</a></p>
+  </div>
+</div>
+<% end %>
+<% if params[:generate] == "passphrase"%>
+<form action="/passphrases" name="pick_passphrase">
+    <div>
+      <label for="security">how many words?</label><br />
+      <select name="security">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <div>
+      <input type="submit">
+    </div>
+  </form>
+<% end %>

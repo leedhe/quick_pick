@@ -14,30 +14,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/home">Lockfind</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/home">HOME</a></li>
-        <li><a href="/random_password">GENERATE A PASSWORD</a></li>
-        <li><a href="/random_passphrase">GENERATE A PASSPHRASE</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
- 
  <% if flash[:notice] %>
     <div class="alert alert-info">
       <%= flash[:notice] %>
@@ -48,7 +25,7 @@
 
  <footer>
    <hr>
-   <p class="pull-left"><strong>Lockfind is made by Cube Web Development. Please do not copy.</strong></p>
+   <p class="pull-left"><strong>Lockfind is made by Cube Web Development. Please do not copy. Support is available at <a href="mailto:cubewebdevs@gmail.com">cubewebdevs@gmail.com</a></strong></p>
    <p class="pull-right"><strong>Thanks, <a href="https://www.google.com/fonts">Google Fonts!</a> *waves*</strong></p>
   </footer>
 </body>

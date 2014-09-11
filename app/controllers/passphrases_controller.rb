@@ -56,5 +56,11 @@ class PassphrasesController < ApplicationController
   end
   
   def random_passphrase
+    w = Webster.new
+     if params['security']
+       @passphrases = (1..params['security'].to_i).map{ w.random_word }.join
+     else
+       render 'random_passphrase'
+     end
   end
 end

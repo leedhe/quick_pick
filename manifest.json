@@ -6,7 +6,7 @@
   "app": {
     "urls": [
       "http://braceyourselfapp.herokuapp.com/random_password",
-      "http://braceyourselfapp.herokuapp.com/random_passphrase",
+      "http://braceyourselfapp.herokuapp.com/random_passphrase"
     ],
     "launch": {
       "web_url": "http://braceyourselfapp.herokuapp.com/"

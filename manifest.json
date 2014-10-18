@@ -1,7 +1,7 @@
 {
   "name": "Brace Yourself",
   "description": "Brace Yourself is a password/passphrase generator that makes getting passwords a quick to-do and not a chore.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "manifest_version": 2,
   "app": {
     "urls": [

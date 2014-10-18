@@ -72,7 +72,7 @@ require 'webster'
   
   def randompassword
     @password_security = params['security']
-      if params['security']
+    if params['security'] && params[:generate] == "password"
         @password_pages = (1..params['security'].to_i).map{ rand(36).to_s(36) }.join
        # c = OpenSSL::Cipher::Cipher.new("aes-256-cbc")
        # c.encrypt
@@ -84,6 +84,7 @@ require 'webster'
         if params[:security] && params[:generate] == "passphrase"
            w = Webster.new
            @passphrases = (1..params['security'].to_i).map{ w.random_word }.join
+          redirect_to "/random_passphrase"
         end
       else
         render 'randompassword'

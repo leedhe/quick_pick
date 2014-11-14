@@ -1,38 +1,26 @@
 <div class="footer-push">
-  <h1 style="font-family: Raleway">Quickly pick a passphrase</h1>
-
-  <form action="/random_passphrase" name="pick_passphrase">
-    <div>
-      <label for="security">How many words?</label><br />
-      <select name="security">
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-      </select>
-    </div>
-    <div>
-      <input type="submit">
-    </div>
-  </form>
-
-
-    <!-- Default panel contents -->
-  <div class="passphrase-info">
-      <label for="passphrase">Passphrase:</label><br />
-    <%= @passphrases %>
-    </div>
-    <div>
-      <label for="security">Security Level:</label><br />
-      <% if params['security'] == "2" %>
-      <h4>Weak</h4>
-      <% elsif params['security'] == "3"  || params['security'] == "4" %>
-          <h4>Medium</h4>
-      <% elsif params['security'] == "5" || params['security'] == "6" %>
-          <h4>Strong</h4>
-      <% end %>
-    </div>
+  <div class="thumbnail col-md-4 col-md-offset-4" style="margin-top: -12px;">
+    <h1 style="font-family: Francois One">Pick a passphrase</h1>
+    <form action="/random_passphrase" name="pick_passphrase">
+      <div>
+        <label for="security">How many words?</label><br />
+        <select name="security">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+        <input type="submit" class="btn btn-primary">
+      </div>
+    </form>
   </div>
-<p><a class="glyphicon glyphicon-repeat">Refresh the page for another passphrase that is  <%= params['security'] %> words long</a></p>
-<p><a href="/random_password">Or get a password &larr;</a></p>
+  <div class="passphrase-info thumbnail col-md-4 col-md-offset-4" style="margin-top: -12px;">
+      <label for="passphrase">Passphrase:</label><br />
+    <h5><%= @passphrases %></h5>
+  </div>
+  <div class="thumbnail col-md-4 col-md-offset-4" style="margin-top: -12px;">
+    <p><a class="glyphicon glyphicon-repeat"> Refresh for different  <%= params['security'] %> word passphrase</a></p>
+    <p><a href="/random_password">Or get a password &larr;</a></p>
+  </div>
+</div>

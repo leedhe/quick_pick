@@ -15,17 +15,22 @@
  */
 
 * {
-  font-family: "Raleway";
+  font-family: "Francois One";
   text-align: center;
 }
 
 body {
-  background-color: #ccccff;
+  height: cover;
+  background-color: #6699FF;
+  background-image:
+    linear-gradient(
+      #6699FF, #fff
+    );
 }
 
 .footer-push {
-   height: 500px; 
-   padding-top: 100px;
+   height: 650px; 
+   padding-top: 200px;
 }
 
 footer {
